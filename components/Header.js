@@ -11,6 +11,20 @@ const Header = () => {
     <header>
       <nav>
         <ul>
+          { user?.isLoggedIn && (
+            <li>
+              <Link href="/donate">
+                <a>Donate </a>
+              </Link>
+            </li>
+            )}
+            { !user?.isLoggedIn && (
+              <li>
+                <Link href="/shop">
+                <a>Shop </a>
+              </Link>
+            </li>
+          )}
           <li>
             <Link href="/">
               <a>Home</a>
